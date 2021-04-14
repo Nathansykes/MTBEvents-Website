@@ -1,0 +1,38 @@
+﻿@{
+
+    ViewData["Title"] = "All Events";
+
+}
+
+
+@{ int count = 1;}
+
+@foreach (var item in Model)
+{
+    count++;
+    if (count > 5)
+    {
+        count = 1;
+    }
+    string src = "/images/MTBImage" + count.ToString() + ".png";
+
+    <a asp-area="" asp-controller="Home" asp-action="EventDetails" asp-route-id="@item.MTBEventID">
+        <div class="EventList">
+
+            <div class="eventTitle">
+                @item.MTBEventTitle
+            </div>
+
+            <div class="eventDescription">
+                @item.MTBEventDate.ToString("dddd, dd/MM/yyyy")
+            </div>
+
+            <img class="EventImage" src=@src />
+        </div>
+
+    </a>
+
+    
+
+
+}

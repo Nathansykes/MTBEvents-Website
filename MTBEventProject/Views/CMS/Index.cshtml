@@ -1,0 +1,32 @@
+﻿@{
+
+    ViewData["Title"] = "Content Management System";
+    Layout = "_CMS";
+
+}
+
+<p><a asp-controller="CMS" asp-action="AddEvent" class="add">Add Event</a></p>
+
+<table class="table">
+
+
+    <tr>
+        <td>Event Title</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td><a asp-controller="Home" asp-action="EventDetails" asp-route-id="@item.MTBEventID" class="tableItemName">@item.MTBEventTitle</a></td>
+            <td><p><a asp-controller="CMS" asp-action="UpdateEvent" asp-route-id="@item.MTBEventID" class="edit">Update</a></p></td>
+            <td><p><a asp-controller="CMS" asp-action="DeleteEvent" asp-route-id="@item.MTBEventID" class="delete">Delete</a></p></td>
+
+        </tr>
+
+
+    }
+
+</table>

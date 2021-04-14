@@ -1,0 +1,89 @@
+﻿@{
+
+    ViewData["Title"] = "Event Search";
+
+}
+
+
+<div class="searchPage">
+    <form asp-action="Search" method="get">
+        <h1>Search</h1>
+        <div>
+
+            <label for="SearchField">Search by</label>
+            <select class="searchSelect" name="SearchField" id="SearchField" onchange="fieldChange()">
+                <option value="MTBEventTitle">Title</option>
+                <option value="MTBEventLocation">Location</option>
+                <option value="MTBEventGroup">Event Group</option>
+            </select>
+            <br><br>
+            <input class="searchInput" type="text" name="SearchString" id="SearchString" />
+            <br><br>
+                <div class="center">
+                    <input class="searchSubmit" type="submit" value="Search" />
+                </div>
+        </div>
+
+    </form>
+    <br />
+    <div>
+
+        @if (ViewData["SearchString"] != null && (string)ViewData["SearchString"] != String.Empty)
+        {
+
+            @foreach (var item in Model)
+
+            {
+                <div class="searchItem">
+                    <a class="searchLink" asp-area="" asp-controller="Home" asp-action="EventDetails" asp-route-id="@item.MTBEventID">
+                        <div>
+                            <div>
+                                @item.MTBEventTitle
+                            </div>
+
+                            <div>
+                                @item.MTBEventDate.ToString("dddd, dd/MM/yyyy")
+                            </div>
+
+                            @switch (ViewData["SearchField"])
+                            {
+                                case "MTBEventLocation":
+                                    <div>
+                                        @item.MTBEventLocation
+                                    </div>
+                                    break;
+                                case "MTBEventGroup":
+                                    <div>
+                                        @item.MTBEventGroup
+                                    </div>
+                                    break;
+                                default:
+                                    //searched by title
+                                    break;
+
+                            }
+
+
+                        </div>
+                    </a>
+                </div>
+                <br />
+
+            }
+            if (Model.Count == 0)
+            {
+                <p>Sorry no matches.</p>
+            }
+
+        }
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

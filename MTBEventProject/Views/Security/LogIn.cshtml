@@ -1,0 +1,33 @@
+﻿@model LogIn
+@{
+    Layout = "_Layout";
+}
+
+
+<h2 class="fullWidth">Log In</h2>
+
+
+
+<div class="form">
+
+
+    <form asp-controller="Security" asp-action="LogIn" method="post">
+        <label asp-for="UserName"></label>
+        <br>
+        <input id="username" type="text" asp-for="UserName" required />
+        <br><br>
+        <label asp-for="Password"></label>
+        <br>
+        <input id="password" type="password" asp-for="Password"  required />
+        <br><br>
+        <label asp-for="RememberMe"></label>
+        <input type="checkbox" asp-for="RememberMe" />
+        <br><br>
+        <input class="loginSubmit" id="logInSubmit" type="submit" value="Log In" />
+        <br><br>
+
+        <h3><a class="newUserLink" asp-controller="security" asp-action="register">Create New User Account</a></h3>
+    </form>
+
+
+</div>

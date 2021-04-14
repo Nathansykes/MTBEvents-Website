@@ -1,0 +1,166 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+:root {
+  
+}
+
+body {
+    font-family: Lato, Montserrat, sans;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: white;
+    padding-left: 5px;
+}
+
+.innerHeader {
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    width: 99vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.LoginLink {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 17px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.page-header {
+    background-color: black;
+    display: flex;
+    padding-bottom: 10px;
+    align-content: center;
+}
+
+.header-img {
+    width: 75px;
+    height: 75px;
+}
+
+.login > p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.login > form > button.delete {
+    margin-top: 0;
+}
+
+main {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+textarea{
+    max-width:80%;
+    
+}
+.tableItemName{
+    color:#000
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th {
+    font-weight: bold;
+}
+
+td, th {
+    padding: 3px 7px;
+}
+
+tr:nth-child(even) {
+    background: #CCC;
+}
+
+form {
+    max-width: 80%;
+}
+h2{
+    max-width:80%;
+}
+
+form > div {
+    padding-top: 10px;
+}
+
+label {
+    display: block;
+}
+
+input[type=text], input[type=password], textarea {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 3px 5px;
+    font-size: 1.2em;
+}
+
+.add, .edit, .delete {
+    border-radius: 6px;
+    margin-top: 20px;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color:#000;
+}
+
+
+.error {
+    background-color: red;
+    color: #fff;
+}

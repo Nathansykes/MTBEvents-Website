@@ -1,0 +1,30 @@
+﻿@model MTBEventProject.Models.MTBEvent
+@{
+
+    ViewData["Title"] = @Model.MTBEventTitle;
+
+}
+
+<div class="details">
+
+
+    <h1>@Model.MTBEventTitle</h1>
+    <h3>@Model.MTBEventDate.ToString("dddd, dd/MM/yyyy")</h3>
+    <h3>@Model.MTBEventLocation</h3>
+    <p>@Model.MTBEventDescription</p>
+
+    @if (Model.MTBEventGroup != "" && Model.MTBEventGroup != null)
+    {
+        <p>Event Group: @Model.MTBEventGroup</p>
+    }
+
+    <br />
+    @if (Model.MTBEventWebsite != "" && Model.MTBEventWebsite != null)
+    {
+
+        <a class="websiteLink" href="@Model.MTBEventWebsite" target="_blank">Go To Organiser Website</a>
+    }
+
+
+</div>
+

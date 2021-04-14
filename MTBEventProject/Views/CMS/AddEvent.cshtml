@@ -1,0 +1,44 @@
+﻿@model MTBEventProject.Models.MTBEventForm
+@{
+    Layout = "_CMS";
+    ViewData["Title"] = "Content Management System - Add Event";
+}
+
+
+<form asp-controller="CMS" asp-action="AddEvent">
+    <div>
+        <label asp-for="MTBEventTitle">Event Title</label>
+        <input type="text" asp-for="MTBEventTitle" required/>
+    </div>
+
+    <div>
+        <label asp-for="MTBEventLocation">Event Location</label>
+        <input type="text" asp-for="MTBEventLocation" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventDescription">Event Description</label>
+        <textarea asp-for="MTBEventDescription"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="MTBEventWebsite">Event Website</label>
+        <input type="text" asp-for="MTBEventWebsite" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventDate">Date</label>
+        <input type="date" asp-for="MTBEventDate" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventGroup">Event Group</label>
+        <input asp-for="MTBEventGroup" />
+    </div>
+
+
+    <div>
+        <input type="submit" value="Add" class="add" />
+    </div>
+
+</form>

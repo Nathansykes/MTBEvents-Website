@@ -1,0 +1,46 @@
+﻿@model MTBEventProject.Models.MTBEventForm
+@{
+    Layout = "_CMS";
+    ViewData["Title"] = "Content Management System - Update Event";
+}
+
+
+<form asp-controller="CMS" asp-action="UpdateEvent">
+    <input type="hidden" name="MTBEventID" value="@Model.MTBEventID" />
+    <div>
+        <label>Event Title</label>
+        <input asp-for="MTBEventTitle" required/>
+    </div>
+
+    <div>
+        <label asp-for="MTBEventLocation">Event Location</label>
+        <input asp-for="MTBEventLocation" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventDescription">Event Description</label>
+        <textarea asp-for="MTBEventDescription" rows="6" cols="60"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="MTBEventWebsite">Event Website</label>
+        <input type="text" asp-for="MTBEventWebsite" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventDate">Event Date</label>
+        <input type="date" asp-for="MTBEventDate" />
+    </div>
+
+    <div>
+        <label asp-for="MTBEventGroup">Event Group</label>
+        <input type="text" asp-for="MTBEventGroup" />
+    </div>
+
+    
+    <div>
+        <input type="submit" value="Update" class="edit" />
+    </div>
+
+</form>
+

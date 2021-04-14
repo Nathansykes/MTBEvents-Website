@@ -1,0 +1,17 @@
+﻿@model MTBEventProject.Models.MTBEvent
+@{
+    Layout = "_CMS";
+    ViewData["Title"] = "Content Management System - Delete Event";
+}
+
+    <form method="post">
+
+        <input type="hidden" name="MTBEventID" value="@Model.MTBEventID" />
+
+        <p>Delete Event @Model.MTBEventTitle?</p>
+
+        <p><input type="submit" value="Delete" class="delete" /></p>
+
+        <p><a asp-controller="CMS" asp-action="Index" class="add">Keep</a><br></p>
+
+    </form>

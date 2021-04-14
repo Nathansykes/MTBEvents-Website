@@ -1,0 +1,212 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+*{
+    box-sizing:border-box;
+}
+body {
+    font-family: Lato, Montserrat, sans;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: black;
+    display:flex;
+    margin-bottom:10px;
+}
+.title{
+    color:white;
+    padding-left:5px;
+}
+.innerHeader {
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+main {
+    width: 99vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+nav ul li {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.homeInfo{
+    width:100%;
+    text-align:center;
+    font-size:x-large;
+}
+.homeImages {
+    display:flex;
+    flex-wrap:wrap;
+}
+.homeIMG-left{
+    width:90%;
+    margin:auto;
+    padding:5px;
+}
+.homeIMG-right {
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+}
+
+.LoginLink {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 17px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    margin-left: auto;
+}
+.page-header {
+    background-color: black;
+    display: flex;
+    padding-bottom: 10px;
+    align-content: center;
+}
+.EventList {
+    display: block;
+    width: 100%;
+}
+.EventImage {
+    width: 100%;
+    position: relative;
+    
+    
+}
+.header-img {
+    width: 75px;
+    height: 75px;
+}
+.eventTitle {
+    margin-top: 5%;
+    margin-left: 5%;
+    position: absolute;
+    z-index: 100;
+    color: black;
+    font-size: 4vw;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.eventDescription {
+    margin-top: 10%;
+    margin-left: 5%;
+    position: absolute;
+    z-index: 100;
+    color: black;
+    font-size: 0.8em;
+    font-weight: bold;
+    width: 85%;
+    height:4%;
+    overflow:hidden;
+}
+.details{
+    width:95%;
+    margin:auto;
+}
+.websiteLink {
+    border-radius: 6px;
+    margin-top: 20px;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #000;
+}
+.form {
+    text-align: left;
+    padding-top: 5%;
+    width: 80%;
+    flex-basis: 100%;
+    margin: auto;
+}
+.searchItem {
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 15px;
+}
+.searchSelect{
+    padding:5px
+}
+.searchLink {
+    color: black;
+    text-decoration: none;
+}
+.searchInput {
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchSubmit {
+    width:200px;
+}
+.center{
+    text-align:center
+}
+.loginSubmit{
+    width:100%;
+}
+input[type="submit"] {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+input[type ='text'], input[type="email"], textarea {
+    width: 100%;
+    padding: 15px 10px;
+}
+
+
+input[type ='date'] {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 1rem;
+}
+
+input[type ='text'], input[type="password"], textarea {
+    width: 100%;
+    padding: 15px 10px;
+}
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.newUserLink{
+    color:#000;
+}
+.msg {
+    background-color: #F2811D;
+    color: #260707;
+    display: inline-block;
+    padding: 3px 5px;
+}
+table{
+    border-collapse:collapse;
+}
+th{
+    background-color:#ccc;
+}
+td,th{
+    border:1px solid #ccc;
+}

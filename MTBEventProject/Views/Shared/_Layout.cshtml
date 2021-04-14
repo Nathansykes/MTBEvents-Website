@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MTB Events</title>
+    <link rel="stylesheet" href="~/css/mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width : 750px)" href="~/css/desktop.css">
+</head>
+<body>
+    <div class="page-header">
+        <img class="header-img" src="~/Images/logo.png" />
+        <h1 class="title">MTBEvents</h1>
+        @if (User.Identity.IsAuthenticated)
+        {
+<a class="LoginLink" asp-controller="Security" asp-action="LogOut">Log Out</a> }
+            else
+            {
+<a class="LoginLink" asp-controller="Security" asp-action="LogIn">Log In</a>}
+
+    </div>
+    <header>
+        <div class="innerHeader">
+            <div>
+
+                <nav>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="AllEvents">Events</a></li>
+                        <li><a asp-controller="Home" asp-action="Search">Search</a></li>
+                        <li><a asp-controller="CMS" asp-action="Index">CMS</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+    <script src="~/js/site.js"></script>
+    <footer>
+    </footer>
+
+</body>
+</html>

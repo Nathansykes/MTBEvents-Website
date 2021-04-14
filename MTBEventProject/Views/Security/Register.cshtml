@@ -1,0 +1,41 @@
+﻿@model Register
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Log In";
+}
+
+<h2>Register</h2>
+<div class="form">
+    <form method="post">
+
+        <label asp-for="UserName"></label>
+        <br>
+        <input type="text" asp-for="UserName" required />
+        <br><br>
+
+        <label asp-for="Password"></label>
+        <br>
+        <input id="password" type="password" asp-for="Password" onkeyup="checkPasswordsMatch()" onchange="checkPasswordsMatch()" onselect="checkPasswordsMatch()" required /></>
+        <br><br>
+
+        <label asp-for="ConfirmPassword"></label>
+        <br>
+        <input id="confirm_password" type="password" asp-for="ConfirmPassword" onkeyup="checkPasswordsMatch()" onchange="checkPasswordsMatch()" onselect="checkPasswordsMatch()" required />
+        <br><br>
+
+        <label asp-for="Email"></label>
+        <br>
+        <input type="email" asp-for="Email" required />
+        <br><br>
+
+
+        <input class="loginSubmit" id="signUpSubmit" type="submit" value="submit" />
+
+
+        <div asp-validation-summary="All" class="message"></div>
+
+        <h3><a class="newUserLink" asp-controller="security" asp-action="LogIn">Go To Log In Page</a></h3>
+
+    </form>
+</div>
+
