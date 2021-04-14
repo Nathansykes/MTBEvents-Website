@@ -1,2 +1,2 @@
-# BasicFilmDbProject
-Starter Project for working with a Database.
+# MTB Event Project Website
+
