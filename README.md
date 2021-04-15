@@ -12,3 +12,6 @@
 **Password:** *Password1!*
 
 ## [View Demo Video On YouTube](https://youtu.be/UkY-A0WHOHQ)
+
+
+[![View Demo Video On YouTube](http://img.youtube.com/vi/UkY-A0WHOHQ/0.jpg)](http://www.youtube.com/watch?v=UkY-A0WHOHQ)
